@@ -1,0 +1,105 @@
+/* Education Section Styles */
+.education-section {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+.education-section h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.education-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.education-card h3 {
+  font-size: 1.5rem;
+  color: #1abc9c;
+  margin-bottom: 0.5rem;
+}
+
+.education-card p {
+  font-size: 1.1rem;
+  color: #555;
+  margin: 0;
+}
+
+/* Certificate Section Styles */
+.certificate-section {
+  margin-top: 2rem;
+}
+
+.certificate-section h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.certificate-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.certificate-card h3 {
+  font-size: 1.5rem;
+  color: #1abc9c;
+  margin-bottom: 0.5rem;
+}
+
+.certificate-card p {
+  font-size: 1.1rem;
+  color: #555;
+  margin: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .education-section {
+    padding: 1rem;
+  }
+
+  .education-section h2,
+  .certificate-section h2 {
+    font-size: 1.75rem;
+  }
+
+  .education-card h3,
+  .certificate-card h3 {
+    font-size: 1.25rem;
+  }
+
+  .education-card p,
+  .certificate-card p {
+    font-size: 1rem;
+  }
+}
