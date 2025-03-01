@@ -26,14 +26,14 @@ const Portfolio = () => {
       technologies: ["Flutter", "Dart", "Firebase"],
     },
     {
-      title: "React Todo App",
-      date: "January 2021",
+      title: "Bulk TikTok Video Downloader",
+      date: "February 2025",
       description:
-        "A simple yet powerful todo application built with React and Firebase.",
-      category: "web",
-      github: "#",
+        "A Python-based GUI application to download TikTok videos, organize them into categories, and reframe them to a specific resolution (e.g., 1080x1920 for vertical videos).",
+      category: "desktop",
+      github: "https://github.com/Bhagyawijenayake/bulk_tiktok_downloader",
       demo: "#",
-      technologies: ["React", "Firebase", "CSS"],
+      technologies: ["Python"],
     },
     {
       title: "Unity Cube Runner Game",
