@@ -49,7 +49,7 @@ const Portfolio = () => {
   "date": "2025",
   "description": "A Chrome extension that allows users to quickly copy Fiverr gig details, including the title, URL, description, and tags, with a single click.",
   "category": "browser-extension",
-  "github": "https://github.com/Bhagyawijenayake/Fiverr-Gig-Data-Copier,
+  "github": "https://github.com/Bhagyawijenayake/Fiverr-Gig-Data-Copier",
   "demo": "https://github.com/Bhagyawijenayake/Fiverr-Gig-Data-Copier",
   "technologies": ["JavaScript", "Chrome Extensions", "Manifest V3", "CSS"]
 }
