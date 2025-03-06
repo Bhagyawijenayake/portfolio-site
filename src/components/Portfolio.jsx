@@ -109,7 +109,7 @@ const Portfolio = () => {
                   <span
                     key={i}
                     className="tech-badge"
-                    data-aos="fade-up"
+                    // data-aos="fade-up"
                     //data-aos-delay={300 + i * 50} // Staggered delay for each technology
                   >
                     {tech}
