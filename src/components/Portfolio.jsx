@@ -79,7 +79,7 @@ const Portfolio = () => {
               key={index}
               className="project-card"
               data-aos="fade-up"
-              data-aos-delay={200 + index * 100} // Staggered delay for each project
+              data-aos-delay={100 + index * 100} // Staggered delay for each project
             >
               <h2>{project.title}</h2>
               <p className="date">{project.date}</p>
@@ -110,7 +110,7 @@ const Portfolio = () => {
                     key={i}
                     className="tech-badge"
                     data-aos="fade-up"
-                    data-aos-delay={300 + i * 50} // Staggered delay for each technology
+                    //data-aos-delay={300 + i * 50} // Staggered delay for each technology
                   >
                     {tech}
                   </span>
