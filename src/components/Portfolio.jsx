@@ -44,6 +44,16 @@ const Portfolio = () => {
       demo: "https://www.linkedin.com/posts/bhagyawijenayake_unity-unity3d-activity-6952676097222205440-2l8y?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC9o5HIBDJNwPM5xh0qpi38oM4Iit9_vpNA",
       technologies: ["Unity", "C#", "3D Game Development"],
     },
+    {
+  "title": "Fiverr Gig Data Copier",
+  "date": "2025",
+  "description": "A Chrome extension that allows users to quickly copy Fiverr gig details, including the title, URL, description, and tags, with a single click.",
+  "category": "browser-extension",
+  "github": "https://github.com/Bhagyawijenayake/Fiverr-Gig-Data-Copier,
+  "demo": "https://github.com/Bhagyawijenayake/Fiverr-Gig-Data-Copier",
+  "technologies": ["JavaScript", "Chrome Extensions", "Manifest V3", "CSS"]
+}
+
   ];
 
   return (
@@ -51,7 +61,7 @@ const Portfolio = () => {
       <h1 data-aos="fade-up">Portfolio</h1>
       {/* Remove AOS from tabs to ensure they are always visible */}
       <div className="tabs" data-aos="fade-down">
-        {["all", "web", "mobile", "desktop", "games", "shopify"].map((tab) => (
+        {["all", "web", "mobile", "desktop", "games", "shopify" ,"browser-extension"].map((tab) => (
           <button
             key={tab}
             onClick={() => setFilter(tab)}
