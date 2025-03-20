@@ -1,8 +1,10 @@
 import { FaBars, FaTimes } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
-import '../css/sidebar.css'
+import "../css/sidebar.css";
+import { useState } from "react";
 
-const Sidebar = ({ open, setOpen }) => {
+const Sidebar = ({ activeSection, scrollToSection }) => {
+  const [open, setOpen] = useState(false);
+
   return (
     <>
       <div className={`sidebar ${open ? "open" : ""}`}>
@@ -11,74 +13,60 @@ const Sidebar = ({ open, setOpen }) => {
           <FaTimes className="close-icon" onClick={() => setOpen(false)} />
         </div>
         <nav>
-          <NavLink
-            className={({ isActive }) =>
-              isActive ? "nav-link active" : "nav-link"
-            }
-            to="/"
-            onClick={() => setOpen(false)}
+          <button
+            className={`nav-link ${activeSection === "about" ? "active" : ""}`}
+            onClick={() => scrollToSection("about")}
           >
             About Me
-          </NavLink>
-          <NavLink
-            className={({ isActive }) =>
-              isActive ? "nav-link active" : "nav-link"
-            }
-            to="/portfolio"
-            onClick={() => setOpen(false)}
+          </button>
+          <button
+            className={`nav-link ${
+              activeSection === "portfolio" ? "active" : ""
+            }`}
+            onClick={() => scrollToSection("portfolio")}
           >
             Portfolio
-          </NavLink>
-          {/* Dummy Menus */}
-          <NavLink
-            className={({ isActive }) =>
-              isActive ? "nav-link active" : "nav-link"
-            }
-            to="/skills"
-            onClick={() => setOpen(false)}
+          </button>
+          <button
+            className={`nav-link ${activeSection === "skills" ? "active" : ""}`}
+            onClick={() => scrollToSection("skills")}
           >
             Skills
-          </NavLink>
-          <NavLink
-            className={({ isActive }) =>
-              isActive ? "nav-link active" : "nav-link"
-            }
-            to="/education"
-            onClick={() => setOpen(false)}
+          </button>
+          <button
+            className={`nav-link ${
+              activeSection === "education" ? "active" : ""
+            }`}
+            onClick={() => scrollToSection("education")}
           >
             Education
-          </NavLink>
-          <NavLink
-            className={({ isActive }) =>
-              isActive ? "nav-link active" : "nav-link"
-            }
-            to="/blog"
-            onClick={() => setOpen(false)}
+          </button>
+          <button
+            className={`nav-link ${activeSection === "blog" ? "active" : ""}`}
+            onClick={() => scrollToSection("blog")}
           >
             Blog
-          </NavLink>
-          <NavLink
-            className={({ isActive }) =>
-              isActive ? "nav-link active" : "nav-link"
-            }
-            to="/experience"
-            onClick={() => setOpen(false)}
+          </button>
+          <button
+            className={`nav-link ${
+              activeSection === "experience" ? "active" : ""
+            }`}
+            onClick={() => scrollToSection("experience")}
           >
             Experience
-          </NavLink>
-          <NavLink
-            className={({ isActive }) =>
-              isActive ? "nav-link active" : "nav-link"
-            }
-            to="/contact"
-            onClick={() => setOpen(false)}
+          </button>
+          <button
+            className={`nav-link ${
+              activeSection === "contact" ? "active" : ""
+            }`}
+            onClick={() => scrollToSection("contact")}
           >
             Contact
-          </NavLink>
+          </button>
         </nav>
       </div>
       {!open && (
-        <FaBars size={30} className="menu-icon" onClick={() => setOpen(true)} />
+        <FaBars size={40} className="menu-icon" onClick={() => setOpen(true)} />
       )}
     </>
   );
