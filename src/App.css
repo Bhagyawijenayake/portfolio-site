@@ -1,5 +1,11 @@
-css
-Copy
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
 /* General Styles */
 body {
   margin: 0;
