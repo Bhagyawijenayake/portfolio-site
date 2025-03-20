@@ -19,6 +19,7 @@ import {
 } from "react-icons/si";
 import profileImage from "../assets/pp.webp"; // Add your profile image here
 import "../css/aboutme.css";
+import { RiEnglishInput } from "react-icons/ri";
 
 const AboutMe = () => {
   return (
@@ -51,7 +52,7 @@ const AboutMe = () => {
           <FaUser /> About Bhagya
         </h3>
         <p style={{ textAlign: "center" }}>
-          I am an graduate (unofficial) in Software Engineering (Second Class
+          I am an graduate  in Software Engineering (Second Class
           Lower Division) with skills in React, Angular, Node.js, Express.js,
           and MongoDB. I am eager to contribute to dynamic teams and projects
           and am committed to continuous learning and innovation.
@@ -65,11 +66,11 @@ const AboutMe = () => {
       {/* Language Proficiency Section */}
       <div className="languages card" data-aos="fade-up" data-aos-delay="100">
         <h3>
-          <FaLanguage /> Language Proficiency
+          Language Proficiency
         </h3>
         <div className="language-icons">
           <span className="language-icon" data-aos="fade-right">
-            <FaLanguage /> English
+            <FaLanguage />   English
           </span>
           <span
             className="language-icon"
