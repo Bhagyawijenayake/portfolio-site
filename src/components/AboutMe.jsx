@@ -17,7 +17,7 @@ import {
   SiWebstorm,
   SiYoutube,
 } from "react-icons/si";
-import profileImage from "../assets/pp.jpg"; // Add your profile image here
+import profileImage from "../assets/pp.webp"; // Add your profile image here
 import "../css/aboutme.css";
 
 const AboutMe = () => {
