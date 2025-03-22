@@ -21,24 +21,39 @@ const App = () => {
 
   useEffect(() => {
     const sections = document.querySelectorAll("section");
-   
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting && entry.intersectionRatio >= 0.6) {
+          if (entry.isIntersecting) {
             requestAnimationFrame(() => {
               setActiveSection(entry.target.id);
             });
           }
         });
       },
-      { threshold: 0.6 }
+      { threshold: 0.3 } // Adjusted for better detection
     );
 
     sections.forEach((section) => observer.observe(section));
 
+    // Backup method for better accuracy on mobile
+    const handleScroll = () => {
+      let currentSection = "about";
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= 150 && rect.bottom >= 150) {
+          currentSection = section.id;
+        }
+      });
+      setActiveSection(currentSection);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
     return () => {
       sections.forEach((section) => observer.unobserve(section));
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 

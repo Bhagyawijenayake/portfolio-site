@@ -13,56 +13,23 @@ const Sidebar = ({ activeSection, scrollToSection }) => {
           <FaTimes className="close-icon" onClick={() => setOpen(false)} />
         </div>
         <nav>
-          <button
-            className={`nav-link ${activeSection === "about" ? "active" : ""}`}
-            onClick={() => scrollToSection("about")}
-          >
-            About Me
-          </button>
-          <button
-            className={`nav-link ${
-              activeSection === "portfolio" ? "active" : ""
-            }`}
-            onClick={() => scrollToSection("portfolio")}
-          >
-            Portfolio
-          </button>
-          <button
-            className={`nav-link ${activeSection === "skills" ? "active" : ""}`}
-            onClick={() => scrollToSection("skills")}
-          >
-            Skills
-          </button>
-          <button
-            className={`nav-link ${
-              activeSection === "education" ? "active" : ""
-            }`}
-            onClick={() => scrollToSection("education")}
-          >
-            Education
-          </button>
-          <button
-            className={`nav-link ${activeSection === "blog" ? "active" : ""}`}
-            onClick={() => scrollToSection("blog")}
-          >
-            Blog
-          </button>
-          <button
-            className={`nav-link ${
-              activeSection === "experience" ? "active" : ""
-            }`}
-            onClick={() => scrollToSection("experience")}
-          >
-            Experience
-          </button>
-          <button
-            className={`nav-link ${
-              activeSection === "contact" ? "active" : ""
-            }`}
-            onClick={() => scrollToSection("contact")}
-          >
-            Contact
-          </button>
+          {[
+            { id: "about", label: "About Me" },
+            { id: "portfolio", label: "Portfolio" },
+            { id: "skills", label: "Skills" },
+            { id: "education", label: "Education" },
+            { id: "blog", label: "Blog" },
+            { id: "experience", label: "Experience" },
+            { id: "contact", label: "Contact" },
+          ].map(({ id, label }) => (
+            <button
+              key={id}
+              className={`nav-link ${activeSection === id ? "active" : ""}`}
+              onClick={() => scrollToSection(id)}
+            >
+              {label}
+            </button>
+          ))}
         </nav>
       </div>
       {!open && (
